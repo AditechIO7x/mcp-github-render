@@ -4,4 +4,4 @@ WORKDIR /app
 
 RUN npm install -g supergateway @modelcontextprotocol/server-github
 
-CMD ["sh", "-c", "supergateway --stdio 'npx -y @modelcontextprotocol/server-github' --port ${PORT:-8080}"]
+CMD ["supergateway", "--stdio", "npx", "-y", "@modelcontextprotocol/server-github", "--port", "8080"]
